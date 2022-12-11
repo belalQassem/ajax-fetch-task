@@ -29,6 +29,15 @@ createBtn.onclick = _ => {
     
     if (input1 != false && input2 != false) {
         initToDo()
+        Swal.fire({
+            title: 'do you want to continue',
+            icon: 'question',
+            iconHtml: '؟',
+            confirmButtonText: "yes",
+            cancelButtonText: 'no',
+            showCancelButton: true,
+            showCloseButton: true
+          })
     }
     else{
 
@@ -106,3 +115,4 @@ function getToDos() {
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts');
     xhr.send();
 };
+getToDos()
